@@ -1,2 +1,1 @@
-# eventy-frontend
-Frontend of "Eventy"
+# Eventy Frontend
