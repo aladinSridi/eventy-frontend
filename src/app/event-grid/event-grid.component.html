@@ -1,0 +1,44 @@
+
+
+
+  <div class="container">
+    <div class="row">
+    
+    
+      
+       
+        <div class="col-md-4 col-sm-6 col-lg-4"  *ngFor="let event of events  | filter:searchText">
+            <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                <div class="popular-dish-thumb">
+                    <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
+                    <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> {{event.rating}}</span> <!-- rateing-->
+                    <span class="likes"><i class="fa fa-eye"></i>  {{event.view}}</span>
+                </div>
+               
+
+
+                <div class="popular-dish-info">
+                    <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url"><SPAN>{{event.name}}</SPAN></a></h4>
+                    <h5 > <SPAN> {{event.Date}}</SPAN> -- <SPAN>{{event.place}}</SPAN></h5>
+              
+                    <p itemprop="description"><SPAN>{{event.discreption}}</SPAN></p>
+                    <span class="price"><SPAN>{{event.price}}</SPAN> TND</span> <!-- price -->
+                    <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
+                    <div class="restaurant-info">
+                        <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                        <div class="restaurant-info-inner">
+                            <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                            <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> <SPAN>{{event.creator}}</SPAN></a></h6> 
+                            <span class="red-clr">{{event.creator_dis}} </span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        
+     
+    </div>
+  </div>

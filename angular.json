@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "eventy-web": {
+    "evventy": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/eventy-web",
+            "outputPath": "dist/evventy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "eventy-web:build"
+            "browserTarget": "evventy:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "eventy-web:build:production"
+              "browserTarget": "evventy:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "eventy-web:build"
+            "browserTarget": "evventy:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "eventy-web:serve"
+            "devServerTarget": "evventy:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "eventy-web:serve:production"
+              "devServerTarget": "evventy:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "eventy-web"
+  "defaultProject": "evventy"
 }

@@ -1,0 +1,506 @@
+
+
+        <!-- hadhi l  pop up  ala tet7al melouwel  -->
+        
+        
+        
+    
+    
+    
+        <!-- nav bar  yetat fi component wa7dou  5atrou yet3awed fi barcha pagat bech to93odch dima t7otlou fel cod mta3ou ana just 
+       tnadi 3al component   w bara  <3 -->
+<div>
+           <app-navbar></app-navbar>  <!-- heka tetssama nadet 3lih  :p -->
+
+
+           <!-- -------------------------  landing text section ala houwa  l parti loula ta3 l page :p -------------------------------------------->
+
+           <div>
+                <div class="block">
+                    <div class="fixed-bg" style="background-image: url(assets/images/topbg.jpg);">
+                    </div>
+                    <div class="page-title-wrapper text-center">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="page-title-inner">
+                                <BR/>
+                                <br/>
+
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>  <!-- taw nel9alhom 7al  matfassa5homch pour l mm-->
+                                <br/>
+                                <br/>
+                                <h1 itemprop="headline">Search Your Favourite Event</h1>
+                                <div class="restaurant-search-form brd-rd2">
+                                    <div class="row mrg10">
+                                        <div class="col-md-6 col-sm-5 col-lg-5 col-xs-12">
+                                            <div class="input-field brd-rd2"><input class="brd-rd2" type="text" placeholder="Where Do You Wanna Go?"></div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                                            <div class="input-field brd-rd2"><i class="fa fa-map-marker"></i><input class="brd-rd2" type="text" placeholder="Search Location"><i class="fa fa-location-arrow"></i></div>
+                                        </div>
+                                        
+                                        <div class="col-md-2 col-sm-3 col-lg-3 col-xs-12">
+                                            <button class="brd-rd2 red-bg" (click)="search()" >SEARCH</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+   <!-- -------------------------  end landing  -------------------------------------------->
+
+         
+   <!-- start  welcome section -->
+	<div  id="welcom">
+            <div class="block remove-bottom">
+                <div class="container">
+                    <div class="row">
+						<div class="welcome-sec">
+							<div class="col-md-6 col-sm-6 col-lg-6">
+							  <div class="welcome-secinfo">
+									<h2>Welcome To Eventy</h2>
+									<span>We Create Delicious Memories</span>  <!-- kan 3andek discription   lel app zid'ha lena ;*-->
+									<p>Proin luctus, justo sit amet laoreet venenatis, libero velit tincidunt mi, nec 
+	                                 fermentum ante massa id quam. In gravida erat vel diam blandit consequat morbi. Ut interdum nuceu egestas arcu uspend isse sodales. Eiusmod tempor incidiunt labore velit dolore magna aliqu sed enimi nim.</p>
+								
+                                <br/>  <!-- metfassa5nich !-->
+                                <br/> <!-- metfassa5nich !!-->
+                                <br/>  <!-- metfassa5nich!!! -->
+                                <br/> <!-- metfassa5nich !!!!-->
+                                <br/>  <!-- metfassa5nich!!!!! -->
+                                <br/> <!-- metfassa5nich !!!!!!!-->
+
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-lg-6">
+								<div class="welcome-gallery">
+									<img src="assets/images/resource/event1.jpg" alt="">
+									<img src="assets/images/resource/event2.jpg" alt="">
+									<img src="assets/images/resource/event3.jpg" alt="">
+								</div>
+							</div>
+						</div>	
+                    </div>
+                </div>
+            </div>
+      <!-- end  welcome section -->
+    </div>
+   
+</div>
+
+
+
+   
+   
+      <!-- start event section fih les events metrassfa-->
+            <div class="block">
+                <div class="container">
+
+                    <div id="filter-me">
+                        <h1> Results for "Keyword""</h1>
+                        <form>
+                            <div class="dropdown">
+                                <button class="dropbtn">Category</button>
+                                <div class="dropdown-content">
+                                  <a routerLink='/transaction'>Transactions</a>
+                                  <a routerLink="/contacts">Contacts</a>
+                                  
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="dropbtn">Option</button>
+                                <div class="dropdown-content">
+                                  <a routerLink='/transaction'>Transactions</a>
+                                  <a routerLink="/contacts">Contacts</a>
+                                  
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="dropbtn">Date </button>
+                                <div class="dropdown-content">
+                                  <a routerLink='/transaction'>Transactions</a>
+                                  <a routerLink="/contacts">Contacts</a>
+                                  
+                                </div>
+                              </div>
+                              <div class="dropdown">
+                                <button class="dropbtn">Budget</button>
+                                <div class="dropdown-content">
+                                  <a routerLink='/transaction'>Transactions</a>
+                                  <a routerLink="/contacts">Contacts</a>
+                                  
+                                </div>
+                              </div>
+
+                         </form>
+                       
+                    </div>
+                    <div  id="hide_all"> <!--gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg-->
+                    <div id="event-Grid1">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div  id="welcom2"class="title1-wrapper text-center">
+                                <div  class="title1-inner">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <span></span><!-- kan 3andek matzid jomla wala  ta9tou9a 9bal titer zid  9oul ma5emamtech fik  -->
+                                    <h2 itemprop="headline">popular of the month</h2>
+                                </div>
+                            </div>
+                            <!-- mena  yabda ligne  l2awel mta3 les event  normalment ykoun dinamique mouch heka ama  yala -->
+                            <div class="remove-ext">
+                                <div class="row">
+
+                                    <!--  start   event  -->
+                                    <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                                            <div class="popular-dish-thumb">
+                                                <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
+                                                <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
+                                                <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
+                                            </div>
+                                           
+
+
+                                            <div class="popular-dish-info">
+                                                <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
+                                                <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                                <span class="price">85.00 TND</span> <!-- price -->
+                                                <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
+                                                <div class="restaurant-info">
+                                                    <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                                                    <div class="restaurant-info-inner">
+                                                        <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                                                        <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6> 
+                                                        <span class="red-clr">bio description </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                   <!--  end  event -->
+                                  
+
+                                       <!--  start   event  -->
+                                       <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                                            <div class="popular-dish-thumb">
+                                                <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
+                                                <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
+                                                <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
+                                            </div>
+                                           
+
+
+                                            <div class="popular-dish-info">
+                                                <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
+                                                <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                                <span class="price">85.00 TND</span> <!-- price -->
+                                                <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
+                                                <div class="restaurant-info">
+                                                    <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                                                    <div class="restaurant-info-inner">
+                                                        <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                                                        <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6> 
+                                                        <span class="red-clr">bio description </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                   <!--  end  event -->
+                                       <!--  start   event  -->
+                                       <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                                            <div class="popular-dish-thumb">
+                                                <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
+                                                <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
+                                                <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
+                                            </div>
+                                           
+
+
+                                            <div class="popular-dish-info">
+                                                <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
+                                                <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                                                <span class="price">85.00 TND</span> <!-- price -->
+                                                <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
+                                                <div class="restaurant-info">
+                                                    <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                                                    <div class="restaurant-info-inner">
+                                                        <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                                                        <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6> 
+                                                        <span class="red-clr">bio description </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                   <!--  end  event -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                   
+                
+                   <!-- end  event section -->
+                <div id="event-details">
+                    <app-event-details></app-event-details>
+                </div>
+            
+       <!-- start upcoming event  hadhom ala  enti 3malt fehom subscribe  yabda yodhhorlek a9reb wa7ed 
+      ya3ni ala 9rib yji -->
+            <div class="block gray-bg" >
+				<div class="top-mockup"><img src="assets/images/resource/mockup2.png" alt=""></div>
+                <div class="container">
+                    <div class="row">
+						<div class="col-md-5 col-sm-5">
+							<div class="booking-form-sec wow fadeIn" data-wow-delay="0.2s">
+								<div class="fit-bg" style="background-image: url(assets/images/resource/booking-frombg.jpg)"></div>
+								<div class="form-meta">
+                                    <h2>upcoming-event </h2>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+									
+									
+								
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-7">
+							<div class="upcoming-event">
+								<div class="title1-wrapper">
+									<i><img alt="" src="assets/images/resource/icon.png"></i>
+									<div class="title1-inner">
+										<span>Easiest Way To Your Favourite Event</span>
+										<h2 itemprop="headline">UPCOMING EVENT</h2>
+									
+									</div>
+								</div>
+								<div class="article-data">
+									<div class="article-info-meta">
+										<span>Monday</span> <!-- nhar  l event-->
+										<a title="" href="#">25 Sep 2018</a> <!--- date-->
+										<a title="" href="#">By kazdarr </a> <!-- w chkoun ala 3amlou-->
+									</div>
+									<div class="article-meta">
+										<h3> Kick-Start The New Year With The Serpentine Running </h3> <!-- event heka titel -->
+										<p>
+											Pellentesque nibh felis, eleifend id, commodo in, interdum vitae, leo praese
+                                           Ut eu ligula. Class aptent taciti sociosqu ad litora torquent conubia.
+										</p> <!-- discription sa8rouna mouch lkol -->
+										
+									</div>
+                                </div>
+                                <!-- l counteur yabda y3edlek chmizalek wa9t 3la awel event-->
+								<div class="counter-meta">
+									<ul class="countdown">
+										<li class="white-bg">
+											<span class="days">10</span>
+											<p class="days_ref">Days</p>
+										</li>
+										<li class="white-bg">
+											<span class="hours">20</span>
+											<p class="hours_ref">Hours</p>
+										</li>
+										<li class="white-bg">
+											<span class="minutes">06</span>
+											<p class="minutes_ref">Minutes</p>
+										</li>
+										<li class="white-bg">
+											<span class="seconds">39</span>
+											<p class="seconds_ref">Seconds</p>
+										</li>
+									</ul>
+                                    <a class="view-more" title="" href="#">View All</a> <!-- view all t'hezek lel event l kol 
+                                     ala 3maltelhom inscription-->
+								</div>	
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="bottom-mockup"><img src="assets/images/resource/mockup1.png" alt=""></div>
+            </div>
+      
+            <div class="block bottom-padd210">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="title1-wrapper text-center">
+                                <div class="title1-inner">
+                                    <span></span> <!-- tnajem tzid 7aja lena-->
+                                    <h2 itemprop="headline">Recent News & Updates</h2>
+                                </div>
+                            </div>
+                            <div class="remove-ext margn-btm">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="news-box wow fadeIn" data-wow-delay="0.2s">
+                                            <div class="news-thumb">
+                                                <a class="brd-rd2" href="blog-detail-right-sidebar.html" title="" itemprop="url"><img src="assets/images/resource/news-img1.jpg" alt="news-img1.jpg" itemprop="image"></a>
+                                                <div class="news-btns">
+                                                    <a class="post-date red-bg" href="#" title="" itemprop="url">JUNE 14</a>
+                                                    <a class="read-more" href="blog-detail-right-sidebar.html" itemprop="url">READ MORE</a>
+                                                </div>
+                                            </div>
+                                            <div class="news-info">
+                                                <h4 itemprop="headline"><a href="blog-detail-right-sidebar.html" title="" itemprop="url">Floury Bakery is The Best Choice</a></h4>
+                                                <p itemprop="description">The only thing bad about the place was the time they .took to provide us with our food</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="news-box wow fadeIn" data-wow-delay="0.4s">
+                                            <div class="news-thumb">
+                                                <a class="brd-rd2" href="blog-detail-left-sidebar.html" title="" itemprop="url"><img src="assets/images/resource/news-img2.jpg" alt="news-img2.jpg" itemprop="image"></a>
+                                                <div class="news-btns">
+                                                    <a class="post-date red-bg" href="#" title="" itemprop="url">AUGUST 14</a>
+                                                    <a class="read-more" href="blog-detail-left-sidebar.html" itemprop="url">READ MORE</a>
+                                                </div>
+                                            </div>
+                                            <div class="news-info">
+                                                <h4 itemprop="headline"><a href="blog-detail-left-sidebar.html" title="" itemprop="url">Cras venenatis erat ac massa Ultricies</a></h4>
+                                                <p itemprop="description">The only thing bad about the place was the time they .took to provide us with our food</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-lg-4">
+                                        <div class="news-box wow fadeIn" data-wow-delay="0.6s">
+                                            <div class="news-thumb">
+                                                <a class="brd-rd2" href="blog-detail.html" title="" itemprop="url"><img src="assets/images/resource/news-img3.jpg" alt="news-img3.jpg" itemprop="image"></a>
+                                                <div class="news-btns">
+                                                    <a class="post-date red-bg" href="#" title="" itemprop="url">APRIL 14</a>
+                                                    <a class="read-more" href="blog-detail.html" itemprop="url">READ MORE</a>
+                                                </div>
+                                            </div>
+                                            <div class="news-info">
+                                                <h4 itemprop="headline"><a href="blog-detail.html" title="" itemprop="url">Easy Homemade Shahi Tukda Recipe</a></h4>
+                                                <p itemprop="description">The only thing bad about the place was the time they .took to provide us with our food</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+        </div>   
+      </div>
+<!--        footer   just tnadilou   kahaw     massnou3 fi component wa7dou 5ater yet3awed  :p -->
+<div id="event_grid">
+<app-event-grid ></app-event-grid>
+</div>
+<app-footer></app-footer> 
+
+
+<!-- **************************************************************************************************************-->
+<!-- **************************************************************************************************************-->
+ <!-- login pop up lena  torbot ----------------------------------------------- -->
+
+        <div class="log-popup text-center">
+            <div class="sign-popup-wrapper brd-rd5">
+                <div class="sign-popup-inner brd-rd5">
+                    <a class="log-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                    <div class="sign-popup-title text-center">
+                        <h4 itemprop="headline">SIGN IN</h4>
+                        <span>with your social network</span>
+                    </div>
+                    <div class="popup-social text-center">
+                        <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i class="fa fa-google-plus"></i> Google</a>
+                        <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                    <form class="sign-form">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="text" placeholder="Username or Email">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="password" placeholder="Password">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <button class="red-bg brd-rd3" type="submit">SIGN IN</button>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <a class="sign-btn" href="#" title="" itemprop="url">Not a member? Sign up</a>
+                                <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!-- **************************************************************************************************************-->
+<!-- **************************************************************************************************************-->
+<!-- register pop up lena  torbot -->
+
+        <div class="sign-popup text-center">
+            <div class="sign-popup-wrapper brd-rd5">
+                <div class="sign-popup-inner brd-rd5">
+                    <a class="sign-close-btn" href="#" title="" itemprop="url"><i class="fa fa-close"></i></a>
+                    <div class="sign-popup-title text-center">
+                        <h4 itemprop="headline">SIGN UP</h4>
+                        <span>with your social network</span>
+                    </div>
+                    <div class="popup-social text-center">
+                        <a class="facebook brd-rd3" href="#" title="Facebook" itemprop="url" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a class="google brd-rd3" href="#" title="Google Plus" itemprop="url" target="_blank"><i class="fa fa-google-plus"></i> Google</a>
+                        <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
+                    <form class="sign-form">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="text" placeholder="Username">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="email" placeholder="Email">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <input class="brd-rd3" type="password" placeholder="Password">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <button class="red-bg brd-rd3" type="submit">REGISTER NOW</button>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <a class="sign-btn" href="#" title="" itemprop="url">Already Registered? Sign in</a>
+                                <a class="recover-btn" href="#" title="" itemprop="url">Recover my password</a>
+                            </div>
+                        </div>
+                    </form>
+
+ <!-- **************************************************************************************************************-->
+ <!-- **************************************************************************************************************-->
+                </div>
+            </div>
+        </div>
+  
+
+
