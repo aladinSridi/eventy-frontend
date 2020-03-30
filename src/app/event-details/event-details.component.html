@@ -1,17 +1,17 @@
 
- 
 
-<app-navbar></app-navbar> 
+
+<app-navbar></app-navbar>
 
 <main (mouseenter)="relodet()" >
-   
-    
+
+
     <header class="stick">
-       
-        
+
+
     </header><!-- Header -->
 
-    
+
 
     <section>
         <div class="block">
@@ -19,8 +19,8 @@
             <div class="page-title-wrapper text-center">
                 <div class="col-md-12 col-sm-12 col-lg-12">
                     <div class="page-title-inner">
-                   
-                      
+
+
                     </div>
                 </div>
             </div>
@@ -31,14 +31,14 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Home</a></li>
-                <li class="breadcrumb-item active">Food Details</li>
+                <li class="breadcrumb-item active">Event Details</li>
             </ol>
         </div>
     </div>
 
     <section>
         <div class="block gray-bg bottom-padd210 top-padd30">
-            
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -49,7 +49,8 @@
                                         <div class="restaurant-detail-info">
                                             <div class="restaurant-detail-thumb">
                                                 <ul class="restaurant-detail-img-carousel">
-                                                    <li><img class="brd-rd3" src="assets/images/resource/Event-detail-big-img1-1.jpg" alt="restaurant-detail-big-img1-1.jpg" itemprop="image"></li>
+                                                    <li><img class="brd-rd3" src="{{event?.picture}}" alt="restaurant-detail-big-img1-1.jpg" itemprop="image"></li>
+                                                    <!--
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-big-img1-2.jpg" alt="restaurant-detail-big-img1-2.jpg" itemprop="image"></li>
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-big-img1-3.jpg" alt="restaurant-detail-big-img1-3.jpg" itemprop="image"></li>
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-big-img1-4.jpg" alt="restaurant-detail-big-img1-4.jpg" itemprop="image"></li>
@@ -59,14 +60,16 @@
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-small-img1-2.jpg" alt="restaurant-detail-small-img1-2.jpg" itemprop="image"></li>
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-small-img1-3.jpg" alt="restaurant-detail-small-img1-3.jpg" itemprop="image"></li>
                                                     <li><img class="brd-rd3" src="assets/images/resource/Event-detail-small-img1-4.jpg" alt="restaurant-detail-small-img1-4.jpg" itemprop="image"></li>
+                                                    -->
                                                 </ul>
                                             </div>
+
                                             <div class="restaurant-detail-title">
-                                                <h1 itemprop="headline">Nik Baker's</h1>
+                                                <h1 itemprop="headline">{{event?.title}}</h1>
                                                 <div class="info-meta">
-                                                    <span>Greater Kailash (GK) 2</span>
-                                                    <span><a href="#" title="" itemprop="url">Domino's</a></span>
+                                                    <span><a href="#" title="" itemprop="url">{{event?.country}}</a></span>
                                                 </div>
+
                                                 <div class="rating-wrapper">
                                                     <a class="gradient-brd brd-rd2" href="#" title="" itemprop="url"><i class="fa fa-star"></i> Rate <i>4.0</i></a>
                                                     <div class="rate-share brd-rd5">
@@ -102,13 +105,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <span class="price">$85.00</span>
-                                                <div class="qty-wrap">
-                                                    <input class="qty" type="text" value="1">
+
+                                                <span class="price">{{event?.cost}} TND</span>
+                                                <div style="display: none;" class="qty-wrap"> <!--chniya héthi a kazdar ?-->
+                                                  <input class="qty" type="text" value="1">
                                                 </div>
-                                                <p itemprop="description">Rennie White, an advertising manager in New York City, leaves for work 10 minutes later these days because she no longer has to wait in line for coffee at a Dunkin' Donuts outlet. Instead, she preorders coffee by sending a text message from her cellphone on the way to work. "I can get off the train and get the coffee and not break my flow," Ms. White says</p>
-                                                <p itemprop="description">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. uni harum quidem sed rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilares impedit quo repellendus eligendi optio cumque nihilare impedit quo minus id quod maxime.</p>
-                                                <a class="brd-rd3" href="#" title="" itemprop="url">Order Now</a>
+                                                <p itemprop="description">{{event?.description}}</p>
+                                                <a class="brd-rd3" href="#" title="" itemprop="url">Participate</a>
                                             </div>
                                         </div>
                                     </div>
@@ -182,12 +185,12 @@
         </div>
     </section>
     <app-footer > </app-footer>
-    
-   
-   
 
-   
 
-  
-      
+
+
+
+
+
+
 </main><!-- Main Wrapper -->

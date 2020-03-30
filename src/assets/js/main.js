@@ -1,6 +1,6 @@
 $(document).ready(function(){
   'use strict';
-  
+
   //===== Profile Image Upload =====*/
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -18,7 +18,7 @@ $(document).ready(function(){
     readURL(this);
   });
 
-  //===== Dropdown Anmiation =====// 
+  //===== Dropdown Anmiation =====//
   var drop = $('.gallery-info-btns > a');
   $('.gallery-info-btns').each(function(){
     var delay = 0;
@@ -26,8 +26,8 @@ $(document).ready(function(){
       $(this).css({transitionDelay: delay+'ms'});
       delay += 100;
     });
-  });  
- 
+  });
+
   new WOW().init();
 
   $('.rating-wrapper > a').on('click',function(){
@@ -328,7 +328,7 @@ $(document).ready(function(){
       slide: 'li',
       fade: false,
       asNavFor: '.restaurant-detail-thumb-carousel'
-    });        
+    });
 
     $('.restaurant-detail-thumb-carousel').slick({
       slidesToShow: 3,
@@ -369,7 +369,7 @@ $(document).ready(function(){
       slide: 'li',
       fade: false,
       asNavFor: '.featured-restaurant-food-thumb-carousel'
-    });        
+    });
 
     $('.featured-restaurant-food-thumb-carousel').slick({
       slidesToShow: 5,
@@ -413,11 +413,11 @@ $(document).ready(function(){
   //===== Ajax Contact Form =====//
   $('#contactform').on('submit', function () {
    var action = $(this).attr('action');
-	  
+
    var msg = $('#message');
    $(msg).hide();
    var data = 'name=' + $('#name').val() + '&email=' + $('#email').val() + '&phone=' + $('#phone').val() + '&comments=' + $('#comments').val() + '&verify=' + $('#verify').val() + '&captcha=' + $(".g-recaptcha-response").val();
-	 
+
    $.ajax({
      type: 'POST',
      url: action,

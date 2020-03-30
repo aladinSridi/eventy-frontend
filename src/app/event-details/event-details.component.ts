@@ -1,4 +1,6 @@
+import { EventService } from './../event.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-details',
@@ -7,19 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDetailsComponent implements OnInit {
 
-  constructor() { }
+  public event;
 
-  ngOnInit(): void {
-   
-   
+  constructor(private eventService: EventService, private _Activatedroute:ActivatedRoute, private router:Router) {
+    this._Activatedroute.paramMap.subscribe(params => {
+      this.eventService.getEventById(params.get('id')).subscribe(res => {
+        this.event = res
+      })
+    });
   }
+
+  ngOnInit(): void {}
 
 
 
   relodet(){
     var i=0;
     var state = history.state || {};
- 
+
     var reloadCount = state.reloadCount || 0;
     if(reloadCount>=3){
       state.reloadCount=0;
@@ -36,11 +43,11 @@ export class EventDetailsComponent implements OnInit {
     // Now, do whatever you want...
    i=2;
    }
-     
+
     if(i==0){
     location.reload();
     i=1;
   }
- 
+
 }
 }

@@ -1,3 +1,5 @@
+import { UserService } from './user.service';
+import { EventService } from './event.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventGridComponent } from './event-grid/event-grid.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +25,15 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     BrowserModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
 
     RouterModule.forRoot([ /* nassen3ou path lel event-details bech nssahlou l 5edma */
-      {path:'details',component:EventDetailsComponent},
+      {path:'details/:id',component:EventDetailsComponent},
       {path:'home',component:LandingComponent},
+      {path:'events',component:EventGridComponent},
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [EventService, UserService]
 })
 export class AppModule { }
