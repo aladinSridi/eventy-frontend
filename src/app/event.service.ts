@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class EventService {
   uri = 'http://localhost:2222';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getEvents() {
     return this.http.get(`${this.uri}/event/all`);
@@ -16,6 +17,31 @@ export class EventService {
 
   getEventById(id) {
     return this.http.get(`${this.uri}/event/${id}`);
+  }
+
+
+  getEventLatest() {
+    return this.http.get(`${this.uri}/event/latest`);
+  }
+
+
+  getEventTrending() {
+    return this.http.get(`${this.uri}/event/trending`);
+  }
+
+
+  getEventUpComing() {
+    return this.http.get(`${this.uri}/event/upcoming`);
+  }
+
+
+  getEventClosest(country) {
+    return this.http.get(`${this.uri}/event/closest/${country}`);
+  }
+
+
+  getEventRandom() {
+    return this.http.get(`${this.uri}/event/random`);
   }
 
 
@@ -33,24 +59,7 @@ export class EventService {
     return this.http.delete(`${this.uri}/event/${id}/delete`);
   }
 
-  
-  getEventLatest() {
-    return this.http.get(`${this.uri}/event/latest`);
+  searchEvents(filter) {
+    return this.http.post(`${this.uri}/event/search`, filter);
   }
-
-
-  getEventTrending() {
-    return this.http.get(`${this.uri}/event/trending`);
-  }
-
-
-  getEventClosest(country) {
-    return this.http.get(`${this.uri}/event/closest/${country}`);
-  }
-
-
-  getEventRandom() {
-    return this.http.get(`${this.uri}/event/random`);
-  }
-  
 }

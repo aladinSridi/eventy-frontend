@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<main>
+    <header class="stick"></header>
+
+    <section>
+        <div class="block">
+            <div class="fixed-bg" style="background-image: url(assets/images/topbg.jpg);"></div>
+            <div class="page-title-wrapper text-center">
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                    <div class="page-title-inner">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bread-crumbs-wrapper">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" title="" itemprop="url">Home</a></li>
+                <li class="breadcrumb-item active">Events</li>
+            </ol>
+        </div>
+    </div>
+
+    <section>
+        <div class="block gray-bg bottom-padd210 top-padd30">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 col-lg-4"  *ngFor="let event of events  | filter:searchText">
+                  <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                      <div class="popular-dish-thumb">
+                          <a  [routerLink]="['/details', event._id]" title="" itemprop="url"><img src="{{event.picture}}" alt="camping.jpg" itemprop="image"></a>
+                          <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.0 </span> <!-- rateing-->
+                          <span class="likes"><i class="fa fa-eye"></i>  12 </span>
+                      </div>
+
+                      <div class="popular-dish-info">
+                          <h4 itemprop="headline"><a  [routerLink]="['/details', event._id]" title="" itemprop="url"><SPAN>{{event.title}}</SPAN></a></h4>
+                          <h5 > <SPAN> {{event.date | date}}</SPAN> -- <SPAN>{{event.country}}</SPAN></h5>
+
+                          <p itemprop="description"><SPAN>{{event.description}}</SPAN></p>
+                          <span class="price"><SPAN>{{event.cost}}</SPAN> TND</span> <!-- price -->
+                          <a class="brd-rd4 " [routerLink]="['/details', event._id]" title="View Details" itemprop="url">View Details</a>
+                          <div class="restaurant-info">
+                              <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                              <div class="restaurant-info-inner">
+                                  <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                                  <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> <SPAN>{{event.organizer}}</SPAN></a></h6>
+                                  <span class="red-clr">{{event.infoline}} </span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+
+<app-footer></app-footer>

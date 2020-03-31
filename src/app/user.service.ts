@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   uri = 'http://localhost:2222';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,) {}
 
   getUsers() {
     return this.http.get(`${this.uri}/user/all`);
@@ -42,5 +42,4 @@ export class UserService {
   deleteUser(id) {
     return this.http.delete(`${this.uri}/user/${id}/delete`);
   }
-
 }
