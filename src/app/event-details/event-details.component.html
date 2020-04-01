@@ -1,6 +1,3 @@
-
-
-
 <app-navbar></app-navbar>
 
 <main (mouseenter)="relodet()" >
@@ -65,9 +62,9 @@
                                             </div>
 
                                             <div class="restaurant-detail-title">
-                                                <h1 itemprop="headline">{{event?.title}}</h1>
+                                                <h1 itemprop="headline"><span style="display:block; width: 80%;">{{event?.title}}</span></h1>
                                                 <div class="info-meta">
-                                                    <span><a href="#" title="" itemprop="url">{{event?.country}}</a></span>
+                                                    <span><a href="#" title="" itemprop="url">{{event?.country | titlecase}}</a></span>
                                                 </div>
 
                                                 <div class="rating-wrapper">

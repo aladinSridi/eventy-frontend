@@ -444,6 +444,20 @@ $(document).ready(function(){
 
 jQuery(window).on('load', function ($) {
   'use strict';
+
+  /* Start - Fixing description and title Length -- Adding (...) */
+  var elts = document.getElementsByName('ellipsable');
+  var i;
+  for (i = 0; i < elts.length; i++) {
+      var wordArray = elts[i].innerHTML.split(' ');
+      while(elts[i].scrollHeight > elts[i].offsetHeight) {
+          wordArray.pop();
+          elts[i].innerHTML = wordArray.join(' ') + '...';
+      }
+  }
+  /* End - ... */
+
+
   //===== Page Loader =====//
   jQuery('.preloader').fadeOut('slow');
 

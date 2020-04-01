@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { EventGridComponent } from './event-grid/event-grid.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
+import { ResponsiveModule } from 'ngx-responsive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     Ng2SearchPipeModule,
     HttpClientModule,
+    ResponsiveModule.forRoot(),
 
     RouterModule.forRoot([ /* nassen3ou path lel event-details bech nssahlou l 5edma */
       {path:'details/:id',component:EventDetailsComponent},
@@ -34,6 +37,6 @@ import { HttpClientModule } from '@angular/common/http';
     ])
   ],
   bootstrap: [AppComponent],
-  providers: [EventService, UserService]
+  providers: [EventService, UserService, CookieService],
 })
 export class AppModule { }

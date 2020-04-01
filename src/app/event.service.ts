@@ -10,6 +10,10 @@ export class EventService {
 
   constructor(private http: HttpClient) {}
 
+  getRecommendedEvents(filter) {
+    return this.http.post(`${this.uri}/event/recommended`, filter);
+  }
+
   getEvents() {
     return this.http.get(`${this.uri}/event/all`);
   }

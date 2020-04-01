@@ -4,7 +4,7 @@
   padding-right:40px;
   margin-right:1%;
   margin-top:1%;
- 
+
   color:black;
   font-weight: 600;
 }
@@ -15,7 +15,7 @@
 
  #angle-down{
   margin-left:5px;
-    
+
   }
   #filter-me
   {
@@ -56,7 +56,7 @@ width:150px;
   border-top: 1px solid rgba(97, 94, 89, 0.288);
   text-decoration: none;
   display: block;
- 
+
 }
 
 .dropdown-content a:hover {background-color: #B7B7B7;}
@@ -65,3 +65,14 @@ width:150px;
 
 .dropdown:hover .dropbtn {background-color: #B7B7B7;}
 
+
+.mod-popup .content {
+  margin: 20px auto 0;
+  color: white;
+  background-color: rgb(141, 141, 141);
+  border: 2px solid rgb(141, 141, 141);
+  border-radius: 20px; padding: 1px 20px;
+  cursor: cell;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+}

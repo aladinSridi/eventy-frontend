@@ -35,10 +35,10 @@
                                 <div class="restaurant-search-form brd-rd2">
                                     <div class="row mrg10">
                                         <div class="col-md-6 col-sm-5 col-lg-5 col-xs-12">
-                                            <div class="input-field brd-rd2"><input style="font-size: medium; color: rgb(78, 78, 78);" class="brd-rd2" type="text" placeholder="Where Do You Wanna Go?"></div>
+                                            <div class="input-field brd-rd2"><input id="s-keyword" style="font-size: medium; color: rgb(78, 78, 78);" class="brd-rd2" type="text" placeholder="Where Do You Wanna Go?"></div>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
-                                            <div class="input-field brd-rd2"><i class="fa fa-map-marker"></i><input style="font-size: medium; color: rgb(78, 78, 78);" class="brd-rd2" type="text" placeholder="Search Location"><i class="fa fa-location-arrow"></i></div>
+                                            <div class="input-field brd-rd2"><i class="fa fa-map-marker"></i><input id="s-location" style="font-size: medium; color: rgb(78, 78, 78);" class="brd-rd2" type="text" placeholder="Search Location"><i class="fa fa-location-arrow"></i></div>
                                         </div>
 
                                         <div class="col-md-2 col-sm-3 col-lg-3 col-xs-12">
@@ -53,7 +53,6 @@
             </div>
 
    <!-- -------------------------  end landing  -------------------------------------------->
-
 
    <!-- start  welcome section -->
 	<div  id="welcom">
@@ -161,22 +160,26 @@
                                     <div class="col-md-4 col-sm-6 col-lg-4" *ngFor="let event of trandingEvents">
                                         <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
                                             <div class="popular-dish-thumb">
-                                                <a  [routerLink]="['/details', event._id]" itemprop="url"><img src="{{ event?.picture }}" alt="camping.jpg" itemprop="image"></a>
+                                                <a  [routerLink]="['/details', event._id]" itemprop="url">
+                                                  <span style="display:block; height: 240px; overflow: hidden;"><img src="{{ event.picture }}" alt="camping.jpg" itemprop="image"></span>
+                                                </a>
                                                 <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
                                                 <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
                                             </div>
 
                                             <div class="popular-dish-info">
-                                                <h4 itemprop="headline"><a  [routerLink]="['/details', event._id]" title="" itemprop="url">{{ event?.title }}</a></h4>
-                                                <p itemprop="description"> {{ event?.description }} </p>
-                                                <span class="price">{{ event?.cost }} TND</span> <!-- price -->
+                                                <h4 itemprop="headline"><a  [routerLink]="['/details', event._id]" title="" itemprop="url">
+                                                  <span name="ellipsable" style="display:block; height: 45px; overflow: hidden;">{{ event.title }}</span>
+                                                </a></h4>
+                                                <p itemprop="description"> <span name="ellipsable" style="display:block; height: 100px; overflow: hidden;">{{ event.description }}</span> </p>
+                                                <span class="price">{{ event.cost }} TND</span> <!-- price -->
                                                 <a class="brd-rd4 " [routerLink]="['/details', event._id]" title="View Details" itemprop="url">View Details</a>
                                                 <div class="restaurant-info">
                                                     <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
                                                     <div class="restaurant-info-inner">
                                                         <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
-                                                        <h6 itemprop="headline"><a routerLink='/user' title="" itemprop="url"> {{ event?.organizer }} </a></h6>
-                                                        <span class="red-clr">{{ event?.infoline }} </span>
+                                                        <h6 itemprop="headline"><a routerLink='/user' title="" itemprop="url"> {{ event.organizer }} </a></h6>
+                                                        <span class="red-clr">{{ event.infoline }} </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -193,89 +196,91 @@
 
 
                    <!-- end  event section -->
-                <div id="event-details">
-                    <app-event-details></app-event-details>
-                </div>
+
 
        <!-- start upcoming event  hadhom ala  enti 3malt fehom subscribe  yabda yodhhorlek a9reb wa7ed
       ya3ni ala 9rib yji -->
             <div class="block gray-bg" >
-				<div class="top-mockup"><img src="assets/images/resource/mockup2.png" alt=""></div>
+				        <div class="top-mockup"><img src="" alt=""></div>
                 <div class="container">
-                    <div class="row">
-						<div class="col-md-5 col-sm-5">
-							<div class="booking-form-sec wow fadeIn" data-wow-delay="0.2s">
-								<div class="fit-bg" [ngStyle]="{ 'background-image': 'url(' + upComingEvent.picture + ')'}"></div>
-								<div class="form-meta">
+                    <div class="row" *ngFor="let event of upComingEvents" >
+
+                        <div class="col-md-5 col-sm-5">
+                            <div class="booking-form-sec wow fadeIn" data-wow-delay="0.2s">
+                              <div class="fit-bg" style="left:10%;">
+                                  <img src="{{event.picture}}" alt="">
+                              </div>
+                              <div class="form-meta">
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 col-sm-7">
+                          <div class="upcoming-event">
+                            <div class="title1-wrapper">
+                                  <i><img alt="" src="assets/images/resource/icon.png"></i>
+                                  <div class="title1-inner">
+                                    <span>Easiest Way To Your Favourite Event</span>
+                                    <h2 itemprop="headline">UPCOMING EVENT</h2>
+                                  </div>
+                            </div>
+
+                            <div class="article-data">
+                                  <div class="article-info-meta">
+                                    <span>{{event.date | date:'EEEE'}} </span> <!-- nhar  l event-->
+                                    <a title="" href="#">{{event.date | date}}</a> <!--- date-->
                                     <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
+                                    <a title="" href="#">By {{event.organizer}} </a> <!-- w chkoun ala 3amlou-->
+                                  </div>
+                                  <div class="article-meta">
+                                    <h3> {{event.title}} </h3> <!-- event heka title -->
+                                    <p>
+                                        {{event.description}}
+                                    </p> <!-- discription sa8rouna mouch lkol -->
+
+                                  </div>
+                            </div>
+
+                            <!-- l counteur yabda y3edlek chmizalek wa9t 3la awel event-->
+                            <div class="counter-meta">
+                                      <ul class="countdown">
+                                        <li class="white-bg">
+                                          <span class="days">{{upComingEvent.daysUntil}}</span>
+                                          <p class="days_ref">Days</p>
+                                        </li>
+                                        <li class="white-bg">
+                                          <span class="hours">{{upComingEvent.hoursUntil}}</span>
+                                          <p class="hours_ref">Hours</p>
+                                        </li>
+                                        <li class="white-bg">
+                                          <span class="minutes">{{upComingEvent.minutesUntil}}</span>
+                                          <p class="minutes_ref">Minutes</p>
+                                        </li>
+                                        <li class="white-bg">
+                                          <span class="seconds">{{upComingEvent.secondsUntil}}</span>
+                                          <p class="seconds_ref">Seconds</p>
+                                        </li>
+                                      </ul>
+                                      <a class="view-more" title="" href="#">View All</a> <!-- view all t'hezek lel event l kol ala 3maltelhom inscription-->
+                            </div>
+                          </div>
+                        </div>
+                </div>
+				      </div>
+				      <div class="bottom-mockup"><img src="" alt=""></div>
+          </div>
 
 
 
-								</div>
-							</div>
-						</div>
-						<div class="col-md-7 col-sm-7">
-							<div class="upcoming-event">
-								<div class="title1-wrapper">
-									<i><img alt="" src="assets/images/resource/icon.png"></i>
-									<div class="title1-inner">
-										<span>Easiest Way To Your Favourite Event</span>
-										<h2 itemprop="headline">UPCOMING EVENT</h2>
-
-									</div>
-								</div>
-								<div class="article-data">
-									<div class="article-info-meta">
-										<span>{{upComingEvent?.date | date:'EEEE'}} </span> <!-- nhar  l event-->
-                    <a title="" href="#">{{upComingEvent?.date | date}}</a> <!--- date-->
-                    <br/>
-										<a title="" href="#">By {{upComingEvent?.organizer}} </a> <!-- w chkoun ala 3amlou-->
-									</div>
-									<div class="article-meta">
-										<h3> {{upComingEvent?.title}} </h3> <!-- event heka title -->
-										<p>
-                        {{upComingEvent?.description}}
-										</p> <!-- discription sa8rouna mouch lkol -->
-
-									</div>
-                                </div>
-                                <!-- l counteur yabda y3edlek chmizalek wa9t 3la awel event-->
-								<div class="counter-meta">
-									<ul class="countdown">
-										<li class="white-bg">
-											<span class="days">{{upComingEvent?.daysUntil}}</span>
-											<p class="days_ref">Days</p>
-										</li>
-										<li class="white-bg">
-											<span class="hours">{{upComingEvent?.hoursUntil}}</span>
-											<p class="hours_ref">Hours</p>
-										</li>
-										<li class="white-bg">
-											<span class="minutes">{{upComingEvent?.minutesUntil}}</span>
-											<p class="minutes_ref">Minutes</p>
-										</li>
-										<li class="white-bg">
-											<span class="seconds">{{upComingEvent?.secondsUntil}}</span>
-											<p class="seconds_ref">Seconds</p>
-										</li>
-									</ul>
-                                    <a class="view-more" title="" href="#">View All</a> <!-- view all t'hezek lel event l kol
-                                     ala 3maltelhom inscription-->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="bottom-mockup"><img src="assets/images/resource/mockup1.png" alt=""></div>
-            </div>
 
             <div class="block bottom-padd210">
                 <div class="container">
@@ -283,88 +288,60 @@
                         <div class="col-md-12 col-sm-12 col-lg-12">
                             <div class="title1-wrapper text-center">
                                 <div class="title1-inner">
-                                    <span></span> <!-- tnajem tzid 7aja lena-->
-                                    <h2 itemprop="headline">Recommended For You</h2>
+                                    <h2 itemprop="headline">Recommanded For You</h2>
                                 </div>
-                            </div>
+                                <div class="mod-popup" [ngStyle]="{'display': modPopUp}">
+                                    <p class="content">
+                                        You have been such a faithful client. Would you consider becoming a moderator ?
+                                        <br/>
+                                        If so, please feel free to contact us at any time.
+                                    </p>
+                                </div>
+
+                                <div class="mod-popup" [ngStyle]="{'display': missedPopUp}">
+                                    <p class="content">
+                                        We have missed you for the past {{Difference_In_Days}} Days.
+                                        <br/>
+                                        Alot has happened !! We encourage you to check it out <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                              </div>
+
                             <div class="remove-ext margn-btm">
                                 <div class="row">
 
 
-                                <div class="col-md-4 col-sm-6 col-lg-4">
-                                  <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
-                                      <div class="popular-dish-thumb">
-                                          <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
-                                          <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
-                                          <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
-                                      </div>
+            <div class="col-md-4 col-sm-6 col-lg-4" *ngFor="let event of recommendedEvents">
 
-                                      <div class="popular-dish-info">
-                                          <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
-                                          <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
-                                          <span class="price">85.00 TND</span> <!-- price -->
-                                          <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
-                                          <div class="restaurant-info">
-                                              <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
-                                              <div class="restaurant-info-inner">
-                                                  <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
-                                                  <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6>
-                                                  <span class="red-clr">bio description </span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                </div>
+              <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="popular-dish-thumb">
+                      <a  [routerLink]="['/details', event._id]" title="" itemprop="url">
+                        <span style="display:block; height: 240px; overflow: hidden;"><img src="{{ event.picture }}" alt="camping.jpg" itemprop="image"></span>
+                      </a>
+                      <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
+                      <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
+                  </div>
 
-                                <div class="col-md-4 col-sm-6 col-lg-4">
-                                    <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
-                                        <div class="popular-dish-thumb">
-                                            <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
-                                            <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
-                                            <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
-                                        </div>
+                  <div class="popular-dish-info">
+                      <h4 itemprop="headline"><a  [routerLink]="['/details', event._id]" title="" itemprop="url">
+                        <span name="ellipsable" style="display:block; height: 45px; overflow: hidden;">{{ event.title }}</span>
+                      </a></h4>
+                      <p itemprop="description"><span name="ellipsable" style="display:block; height: 100px; overflow: hidden;">{{ event.description }}</span></p>
+                      <span class="price">{{ event.cost }} TND</span> <!-- price -->
+                      <a class="brd-rd4 " [routerLink]="['/details', event._id]" title="View Details" itemprop="url">View Details</a>
+                      <div class="restaurant-info">
+                          <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
+                          <div class="restaurant-info-inner">
+                              <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
+                              <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> {{ event.organizer }}</a></h6>
+                              <span class="red-clr">{{ event.infoline }} </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-                                        <div class="popular-dish-info">
-                                            <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
-                                            <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
-                                            <span class="price">85.00 TND</span> <!-- price -->
-                                            <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
-                                            <div class="restaurant-info">
-                                                <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
-                                                <div class="restaurant-info-inner">
-                                                    <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
-                                                    <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6>
-                                                    <span class="red-clr">bio description </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
+            </div>
 
-                                  <div class="col-md-4 col-sm-6 col-lg-4">
-                                      <div class="popular-dish-box style2 wow fadeIn" data-wow-delay="0.2s">
-                                          <div class="popular-dish-thumb">
-                                              <a  routerLink='/details' title="" itemprop="url"><img src="assets/images/resource/Camping.jpg" alt="camping.jpg" itemprop="image"></a>
-                                              <span class="post-rate yellow-bg brd-rd2"><i class="fa fa-star-o"></i> 4.25</span> <!-- rateing-->
-                                              <span class="likes"><i class="fa fa-heart-o"></i> 12</span>
-                                          </div>
-
-                                          <div class="popular-dish-info">
-                                              <h4 itemprop="headline"><a  routerLink='/details' title="" itemprop="url">camping</a></h4>
-                                              <p itemprop="description"> Event details .. Lorem Ipsum is simply dummy text of the printing and typesetting </p>
-                                              <span class="price">85.00 TND</span> <!-- price -->
-                                              <a class="brd-rd4 " routerLink='/details' title="View Details" itemprop="url">View Details</a>
-                                              <div class="restaurant-info">
-                                                  <img src="assets/images/resource/logo01.png" alt="creator-logo.png" itemprop="image">
-                                                  <div class="restaurant-info-inner">
-                                                      <!-- lien  lazmou yhezek l profil l creator mta3 l event -->
-                                                      <h6 itemprop="headline"><a routerLink='/creator' title="" itemprop="url"> Event Creator Name ...etc </a></h6>
-                                                      <span class="red-clr">bio description </span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                    </div>
 
                                 </div>
                             </div>
@@ -376,9 +353,7 @@
         </div>
       </div>
 <!--        footer   just tnadilou   kahaw     massnou3 fi component wa7dou 5ater yet3awed  :p -->
-<div id="event_grid">
-<app-event-grid ></app-event-grid>
-</div>
+
 <app-footer></app-footer>
 
 
@@ -400,7 +375,7 @@
                         <a class="twitter brd-rd3" href="#" title="Twitter" itemprop="url" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
                     </div>
                     <span class="popup-seprator text-center"><i class="brd-rd50">or</i></span>
-                    <form class="sign-form">
+                    <form class="sign-form" autocomplete="on">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-lg-12">
                                 <input class="brd-rd3" type="text" placeholder="Username or Email">
@@ -466,4 +441,6 @@
         </div>
 
 
+ <!-- **************************************************************************************************************-->
+ <!-- **************************************************************************************************************-->
 
