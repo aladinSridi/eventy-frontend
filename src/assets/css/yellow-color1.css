@@ -1,5 +1,5 @@
 /*	Main Color File
-	color: Yellow	
+	color: Yellow
 */
 /*===== Background Color =====*/
 .yellow-bg,
@@ -30,7 +30,6 @@ a.close-buyer:hover,
 a.close-buyer:focus,
 a.thanks-close:hover,
 a.thanks-close:focus,
-.restaurant-search-form,
 .chef-box,
 .menu-sec > a:hover:hover
 {
@@ -73,13 +72,13 @@ nav > div > ul > li a:focus,
 	border-color: #ffbe00;
 }
 
-/*===== Border Top Color =====*/ 
+/*===== Border Top Color =====*/
 
 {
 	border-top-color: #ffbe00;
 }
 
-/*===== Border Right Color =====*/ 
+/*===== Border Right Color =====*/
 
 {
 	border-right-color: #ffbe00;
@@ -91,7 +90,7 @@ nav > div > ul > li a:focus,
 	border-bottom-color: #ffbe00;
 }
 
-/*===== Border Left Color =====*/ 
+/*===== Border Left Color =====*/
 
 {
 	border-left-color: #ffbe00;
@@ -99,5 +98,5 @@ nav > div > ul > li a:focus,
 .filter{
 	color:red;
 	background-color: rgba(0,0,0,.9);
-  
+
   }
